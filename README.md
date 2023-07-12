@@ -3,7 +3,7 @@
 NAME
 ====
 
-App::SerializerPerf - Performance tests for Raku data serializer codecs
+**App::SerializerPerf** - Performance tests for Raku data serializer codecs
 
 SYNOPSIS
 ========
@@ -19,7 +19,7 @@ serializer-perf [--runs=UInt] [--count=UInt] [--source=Path]
 DESCRIPTION
 ===========
 
-**App::SerializerPerf** Provides one Raku program, `serializer-perf`, which drives a test suite of performance and correctness (fidelity) tests for Raku data serializer codecs. It is currently able to test the following codecs:
+**App::SerializerPerf** provides one Raku program, `serializer-perf`, which drives a test suite of performance and correctness (fidelity) tests for Raku data serializer codecs. It is currently able to test the following codecs:
 
 <table class="pod-table">
 <thead><tr>
