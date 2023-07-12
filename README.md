@@ -1,4 +1,4 @@
-[![Actions Status](https://github.com/japhb/serializer-perf/workflows/test/badge.svg)](https://github.com/japhb/serializer-perf/actions)
+[![Actions Status](https://github.com/tbrowder/App-SerializerPerf/workflows/linux/badge.svg)](https://github.com/tbrowder/App-SerializerPerf/actions) [![Actions Status](https://github.com/tbrowder/App-SerializerPerf/workflows/macos/badge.svg)](https://github.com/tbrowder/App-SerializerPerf/actions) [![Actions Status](https://github.com/tbrowder/App-SerializerPerf/workflows/win64/badge.svg)](https://github.com/tbrowder/App-SerializerPerf/actions)
 
 NAME
 ====
@@ -42,7 +42,7 @@ Geoffrey Broadwell <gjb@sonic.net>
 COPYRIGHT AND LICENSE
 =====================
 
-Copyright 2021-2022 Geoffrey Broadwell
+Copyright 2021-2023 Geoffrey Broadwell
 
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 
