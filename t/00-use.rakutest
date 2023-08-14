@@ -2,7 +2,7 @@ use v6.d;
 use Test;
 
 
-use App::SerializerPerf Empty;
+use App::SerializerPerf;
 
 
 pass "all modules loaded successfully";

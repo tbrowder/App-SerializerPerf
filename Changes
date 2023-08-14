@@ -1,6 +1,8 @@
 Revision history for serializer-perf
 
 {{$NEXT}}
+  - Break test.yml into separate linux, macos, and win64 test files
+    + Add the two new tests into the dist.ini file
 
 0.0.4  2022-02-23T20:58:23-08:00
   - Missed in last release: update README to match change in defaults

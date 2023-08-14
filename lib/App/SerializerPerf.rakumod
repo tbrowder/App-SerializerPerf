@@ -1,4 +1,4 @@
-unit module App::SerializerPerf:auth<zef:japhb>:api<0>:ver<0.0.4>;
+unit module App::SerializerPerf;
 
 # NOTE: To test a structure pulled from a JSON file, you'll need a JSON test
 #       file to work with.  I snapshotted mine from ~/.zef/store/360.zef.pm .
@@ -30,10 +30,11 @@ constant &toml-thumb-encode  = TOML::Thumb::EXPORT::DEFAULT::<&to-toml>;
 constant &toml-thumb-decode  = TOML::Thumb::EXPORT::DEFAULT::<&from-toml>;
 
 
-my @fast   = < CBOR::Simple BSON::Simple JSON::Fast >;
-my @mpack  = < Data::MessagePack MessagePack >;
-my @toml   = < TOML::Thumb TOML(tony-o) Config::TOML >;
-my @misc   = < JSON::Hjson BSON::Document .raku/EVAL YAMLish >;
+my @fast   = < CBOR::Simple       BSON::Simple    JSON::Fast         >;
+my @mpack  = < Data::MessagePack  MessagePack                        >;
+my @toml   = < TOML::Thumb        TOML(tony-o)    Config::TOML       >;
+my @misc   = < JSON::Hjson        BSON::Document  .raku/EVAL YAMLish >;
+
 my @order  = (@fast, @mpack, @toml, @misc).flat;
 my $length = @order.map(*.chars).max;
 my %enabled is Set = @order;
@@ -220,7 +221,7 @@ sub time-codecs(Str:D $variant, $struct,
 
 =head1 NAME
 
-serializer-perf - Performance tests for Raku data serializer codecs
+B<App::SerializerPerf> - Performance tests for Raku data serializer codecs
 
 =head1 SYNOPSIS
 
@@ -236,7 +237,8 @@ serializer-perf [--runs=UInt] [--count=UInt] [--source=Path]
 
 =head1 DESCRIPTION
 
-C<serializer-perf> is a test suite of performance and correctness (fidelity)
+B<App::SerializerPerf> provides one Raku program, C<serializer-perf>,
+which drives a test suite of performance and correctness (fidelity)
 tests for Raku data serializer codecs.  It is currently able to test the
 following codecs:
 
@@ -276,7 +278,7 @@ Geoffrey Broadwell <gjb@sonic.net>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2021-2022 Geoffrey Broadwell
+Copyright 2021-2023 Geoffrey Broadwell
 
 This library is free software; you can redistribute it and/or modify it under
 the Artistic License 2.0.
